@@ -1,0 +1,18 @@
+//	1. Faça um programa que leia o preço de 10 produtos. Ao final
+//	escreva o somatório dos preços.
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		int preodutos=0;
+		double preco, count = 0;
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("Porduto [" + (i+ 1) +"]");
+			System.out.println("Preço: ");
+			preco = sc.nextDouble();
+			count += preco;
+		}
+		System.out.println(count);
+		sc.close();
+	}
