@@ -1,0 +1,23 @@
+	
+//	3. Faça um programa que leia a idade de 10 pessoas. Ao final
+//	escreva a média das idades.
+
+package mainPackage;
+
+import java.util.Scanner;
+
+public class main_class {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int idade = 0, somaidades = 0;
+		double media;
+		
+		for(int i = 0 ; i < 10; i++) {
+			idade = sc.nextInt();
+			somaidades += idade;
+		}
+		media = somaidades/10;
+		System.out.println(media);
+		sc.close();
+	}
+}
