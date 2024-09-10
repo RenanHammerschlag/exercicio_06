@@ -1,6 +1,11 @@
 //	1. Faça um programa que leia o preço de 10 produtos. Ao final
 //	escreva o somatório dos preços.
-	
+
+package mainPackage;
+
+import java.util.Scanner;
+
+public class main_class {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -16,3 +21,4 @@
 		System.out.println(count);
 		sc.close();
 	}
+}
