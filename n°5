@@ -1,0 +1,41 @@
+//	5. Crie um programa que leia a altura de um número indeterminado
+//	de pessoas. Ao final o programa deve informar o total de pessoas
+//	cadastradas, a quantidade de pessoas com altura inferior a 1,60
+//	metros; a quantidade de pessoas com altura entre 1,60 metros e
+//	1,80 metros e a quantidade de pessoas com altura superior a
+//	1,80 metros.
+
+package mainPackage;
+
+import java.util.Scanner;
+
+public class main_class {
+  public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int continuar = 0;
+		double altura;
+		int qtd_maior = 0, qtd_entre = 0, qtd_menor = 0;
+		do {
+			
+			System.out.println("Informe sua altura em CM");
+			altura=sc.nextDouble();
+			
+			if(altura >= 180) {
+				qtd_maior ++;
+			}else if(altura > 160 && altura < 180) {
+				qtd_entre ++;
+			}else if(altura <= 160) {
+				qtd_menor ++;
+			}
+			
+			
+			System.out.println("Continuar? (1 - sim)");
+			continuar = sc.nextInt();
+		}while(continuar == 1);
+		
+		System.out.println("Maiores de 180 : " + qtd_maior);
+		System.out.println("Na media: " + qtd_entre);
+		System.out.println("Menores de 160 : " + qtd_menor);
+		sc.close();
+	}
+}
