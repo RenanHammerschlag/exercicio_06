@@ -1,0 +1,32 @@
+//	4. Elabore um programa que leia o sexo de um número indeterminado
+//	de pessoas. Ao final escreva a quantidade de pessoas
+//	cadastradas e o total de pessoas de cada sexo.
+
+package mainPackage;
+
+import java.util.Scanner;
+
+public class main_class {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		String sexo = null;
+		int qtd;
+		int qtd_Masc = 0, qtd_Fem = 0;
+		System.out.println("Quantas pessoas? ");
+		qtd = sc.nextInt();
+		
+		for(int i = 0; i < qtd; i++) {
+			System.out.println("Informe o sexo: (M - masculino; F - feminino");
+			sexo = sc.next();
+			if(sexo.equalsIgnoreCase("m")) {
+				qtd_Masc ++;
+			}else if(sexo.equalsIgnoreCase("F")){
+				qtd_Fem ++;
+			}
+		}
+		System.out.println("Masculino: "+ qtd_Masc);
+		System.out.println("Feminino: "+ qtd_Fem);
+		sc.close();
+	}
+}
